@@ -16,4 +16,5 @@ os.makedirs("/output", exist_ok=True)
 shutil.copyfile(src, "/output/entry.png")
 print("wrote /output/entry.png")
 # deterministic: same input image → same output bytes every run
+# Entry for make.fun coolest-art-01 bounty ($250 USDC on Solana)
 
