@@ -1,22 +1,23 @@
+# make.fun entry: coolest-art-01 - "Nebula Silk"
+#
+# Nebula Silk is a De Jong strange attractor drawn as a luminous
+# log-density point cloud and colored through a deep-space palette
+# (black -> indigo -> violet -> magenta -> ember -> white), with a
+# vertical heat tint, bloom and a subtle chromatic glow, a faint star
+# field, a soft vignette and fine grain. Every random step uses fixed
+# seeds, so the rendering is fully deterministic.
+#
+# This file only ships the artwork: it creates /output if missing and
+# copies the bundled entry.png (kept next to this script) to
+# /output/entry.png. The full generator is generate.py.
+
 import os
 import shutil
 
-# make.fun entry — coolest-art-01 ("Make the coolest art")
-# Writes the competition's entry image to /output/entry.png.
-# The image is bundled in this repository (entry.png): "Nebula Silk",
-# a De Jong strange attractor rendered as log-density point clouds
-# (14.4M points), auto-centered, colored through a deep-space palette
-# (black → indigo → violet → magenta → ember → white) with a vertical
-# heat tint, bloom with chromatic glow, star field, vignette and fine
-# grain. numpy + PIL, fully deterministic (fixed seeds), no network.
-# generate.py holds the full generator for reference.
+source = os.path.join(os.path.dirname(os.path.abspath(__file__)), "entry.png")
+target_dir = "/output"
+target = os.path.join(target_dir, "entry.png")
 
-here = os.path.dirname(os.path.abspath(__file__))
-src = os.path.join(here, "entry.png")
-
-os.makedirs("/output", exist_ok=True)
-shutil.copyfile(src, "/output/entry.png")
-print("wrote /output/entry.png")
-# deterministic: same input image → same output bytes every run
-# Entry for make.fun coolest-art-01 bounty ($250 USDC on Solana)
-
+os.makedirs(target_dir, exist_ok=True)
+shutil.copyfile(source, target)
+print("wrote", target)
