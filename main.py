@@ -3,10 +3,12 @@ import shutil
 
 # make.fun entry — coolest-art-01 ("Make the coolest art")
 # Writes the competition's entry image to /output/entry.png.
-# The image is bundled in this repository (entry.png) and is a
-# deterministic render: a De Jong strange attractor colored by
-# point density (near-black → deep blue → violet → magenta → orange → white),
-# 4000 walkers × 6000 steps ≈ 24M points, numpy + PIL.
+# The image is bundled in this repository (entry.png): "Nebula Silk",
+# a De Jong strange attractor rendered as log-density point clouds
+# (14.4M points), auto-centered, colored through a deep-space palette
+# (black → indigo → violet → magenta → ember → white) with a vertical
+# heat tint, bloom with chromatic glow, star field, vignette and fine
+# grain. numpy + PIL, fully deterministic (fixed seeds), no network.
 # generate.py holds the full generator for reference.
 
 here = os.path.dirname(os.path.abspath(__file__))

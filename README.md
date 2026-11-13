@@ -2,10 +2,12 @@
 
 Entry for make.fun's **Make the coolest art** competition.
 
-A deterministic De Jong strange attractor rendered as a luminous
-point cloud and colored by point density (near-black → deep blue →
-violet → magenta → orange → white). 4,000 walkers × 6,000 steps ≈
-24 million plotted points, drawn with numpy + PIL.
+**"Nebula Silk"** — a De Jong strange attractor rendered as a
+luminous log-density point cloud (14.4 million plotted points),
+auto-centered and colored through a deep-space palette
+(black → indigo → violet → magenta → ember → white) with a
+vertical heat tint, bloom with chromatic glow, a faint star field,
+vignette and fine grain. Fully deterministic (fixed seeds), numpy + PIL.
 
 `main.py` writes the bundled image to `/output/entry.png`;
 `generate.py` is the full generator for reference.
